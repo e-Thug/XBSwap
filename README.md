@@ -16,3 +16,6 @@ How do XBSwap
 - The console window should then say it's unblocked the servies and you are all set.
 
 Again thank you M$, without you I wouldn't make such a pointless tool :)
+
+
+-Added PID killing. Forgot to kill all associated PID's prior to blocking services. Tool should be functional now.
