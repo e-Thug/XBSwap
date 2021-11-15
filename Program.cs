@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Diagnostics;
 using Microsoft.Win32;
 
 namespace XBSwap
@@ -9,6 +10,24 @@ namespace XBSwap
         {
             Console.WriteLine("XBSwap by ASN\n");
             Console.WriteLine("Sign out of your XBL account before launching a game.");
+
+            foreach (var process in Process.GetProcessesByName("GameBarFTServer"))
+            {
+                process.Kill();
+            }
+            foreach (var process0 in Process.GetProcessesByName("gamingservices"))
+            {
+                process0.Kill();
+            }
+            foreach (var process00 in Process.GetProcessesByName("GameBar"))
+            {
+                process00.Kill();
+            }
+            foreach (var process00 in Process.GetProcessesByName("gamingservicesnet.exe"))
+            {
+                process00.Kill();
+            }
+            Console.WriteLine("Processes Ended.");
             Thread.Sleep(500);
             const string userRoot = "HKEY_CURRENT_USER";
             const string subkey = "DisallowRun";
