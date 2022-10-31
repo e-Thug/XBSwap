@@ -23,9 +23,9 @@ namespace XBSwap
             {
                 process00.Kill();
             }
-            foreach (var process00 in Process.GetProcessesByName("gamingservicesnet.exe"))
+            foreach (var process000 in Process.GetProcessesByName("gamingservicesnet.exe"))
             {
-                process00.Kill();
+                process000.Kill();
             }
             Console.WriteLine("Processes Ended.");
             Thread.Sleep(500);
